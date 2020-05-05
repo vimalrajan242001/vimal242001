@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+    <link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+    <link rel="canonical" href="https://codepen.io/Lewitje/pen/BNNJjo?limit=all&page=21&q=animation" />
+    
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style_login.css' %}">
+     <title>login</title>
+</head>
+<body> 
+     <div class="wrapper">
+    <div class="container">
+        <h1>Login</h1>
+    
+            
+            <form class="form" action="login" method="POST">
+                {% csrf_token %}
+                <input type="text"  name="username" id="uniqueID" placeholder="Unique ID" required>
+                <input type="password" name="password" id="password" placeholder="password" required>
+                <button type="submit" id="login-button">Login</button>
+                <p class="message1">Not registered? <a action="register" href="register">Create an account</a></p>
+            </form>
+        </div>
+            <div>
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor %}
+        </div>
+        
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+        <li></li>
+        <li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+        <li></li>
+        
+	</ul>
+</div>
+
+</body>
+</html>

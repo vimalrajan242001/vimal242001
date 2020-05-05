@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style_registers.css' %}">
+     <title>project</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Register</h1>
+        
+                <form action="register" method="POST">
+                   {% csrf_token %}
+                    <input type="text" name="first_name" id="fname" placeholder="First name" required>
+                    <input type="text" name="last_name" id="lname" placeholder="Last name" required><br>
+                    <input type="email" name="email" id="mail" placeholder="mail address"><br>
+                    <input type="text" name="username" id="uniqueID" placeholder="Unique ID" required><br>
+                    
+                    <input type="password" name="password1" id="password" placeholder="new password"><br>
+                    <input type="password" name="password2" id="password" placeholder="confirm password"><br>
+                    <button type="submit" id="register-button">Register</button>
+                    <p class="message1">Already registered? <a action='login' href=" login">Login</a></p>
+                </form>
+        </div>
+    <div>
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </div>
+    <ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+        <li></li>
+        <li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+        <li></li>
+        
+	</ul>
+</div>
+</body>
+</html>

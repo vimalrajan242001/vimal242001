@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_indexsss.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <title>web app</title>
+</head>
+<body>
+    <header class="masthead">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <a class="example_a"  action='leave_req1' href="leave_req1/leave_req1" rel="nofollow noopener">leave request form</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<footer class="footer text-center">
+  <p>© 2020 Copyright:designed and mainted by <a href="#">Vimal Rajan G</a></p>
+</footer>
+</body>
+</html>
+{% endblock %}

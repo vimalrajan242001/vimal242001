@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}    
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_leavess.css' %}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+    <link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+    <link rel="canonical" href="https://codepen.io/Lewitje/pen/BNNJjo?limit=all&page=21&q=animation" />
+    
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+      $( "#datepicker1" ).datepicker();
+    } );
+    </script>
+	<title>leave request</title>
+</head>
+
+
+
+
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+        <h1>Leave Request Form </h1>
+        {% if user.is_authenticated %}
+        <p>Welcome,{{user.first_name}}</p><br>
+        {% endif %}
+        <form action="leave_req1" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Submit</button>
+       </form>
+      </div>
+      <div>
+      {% for message in messages %}
+      <p>{{message}}</p>
+      {% endfor %}
+      </div>
+      <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      </ul>
+    </div>
+    
+ 
+<footer class="footer text-center">
+  <p>© 2020 Copyright:designed and mainted by <a href="#">Vimal Rajan G</a></p>
+</footer>
+    {%endblock%}
+</body>
+</html>

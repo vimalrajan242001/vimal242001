@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_basesss.css' %}">
+    
+    <title>web app</title>
+</head>
+<body>
+  <header class="header">
+    <a href="homes" class="logo">Web Application</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+       {% if user.is_authenticated %}
+      <li><a href="#about"><span class="glyphicon glyphicon-user"></span>Hello,{{user.first_name}}</a></li>
+      <li><a action='logout' href="account/logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      {% else %}
+      <li><a action='register' href="account/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+      <li><a action='login' href="account/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       {% endif %}
+    </ul>
+  </header>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
