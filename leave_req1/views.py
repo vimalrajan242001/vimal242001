@@ -22,18 +22,7 @@ def leave_req1(request):
             subject=username +" wants holiday"
             content="from: "+ start_date +"\nto: "+ end_date +"\nreason: "+reason
             recepient = email
-            if mentors=='mentor1':
-                send_mail(subject,
-                content, 
-                recepient,
-                ['vimalrajansret@gmail.com'], 
-                fail_silently=False)
-            elif mentors=="mentor2":
-                send_mail(subject,
-                content, 
-                recepient,
-                ['vimalrajan242001@gmail.com'], 
-                fail_silently=False)
+          
         msg='mail is sent '+mentors
         messages.info(request,msg)
         return render(request, 'leave.html',{'form':form})
