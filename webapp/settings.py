@@ -29,8 +29,8 @@ ALLOWED_HOSTS = ['vimal24.herokuapp.com']
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'vimalrajan242001@gmail.com'
-EMAIL_HOST_PASSWORD = 'vimalrajan.24'
+EMAIL_HOST_USER = 'vimalrajansret@gmail.com'
+EMAIL_HOST_PASSWORD = 'vimalrajan.2001'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
