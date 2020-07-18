@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['vimal24.herokuapp.com']
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'vimalrajansret@gmail.com'
+EMAIL_HOST_USER = 'vimalrajan242001@gmail.com'
 EMAIL_HOST_PASSWORD = 'googlepass24'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
